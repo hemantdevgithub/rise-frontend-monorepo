@@ -1,0 +1,18 @@
+{
+  "extends": "@repo/typescript-config/react-library.json",
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "baseUrl": ".",
+    "paths": {
+      "@ui/*": ["./src/*"],
+      "@ui/lib/utils": ["./src/lib/utils.ts"]
+    }
+  },
+  "include": [
+    "src",
+    "../../apps/web/src/components/ui/article-card.tsx",
+    "../../apps/web/src/components/ui/lesson-card.tsx"
+  ],
+  "exclude": ["node_modules", "dist"]
+}

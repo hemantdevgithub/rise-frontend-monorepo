@@ -1,0 +1,18 @@
+{
+  "name": "@repo/utils",
+  "version": "1.0.0",
+  "dependencies": {
+    "react-hook-form": "^7.53.0",
+    "zod": "^3.23.8"
+  },
+  "exports": {
+    "./constants": "./src/constants/index.constant.ts",
+    "./validations": "./src/validations/index.validation.ts",
+    "./functions": "./src/functions/index.function.ts",
+    "./types": "./src/types/index.ts",
+    "./hook-form": "./src/validations/react-hook-form.ts"
+  },
+  "devDependencies": {
+    "@hookform/resolvers": "^3.9.1"
+  }
+}

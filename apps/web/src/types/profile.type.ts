@@ -1,0 +1,27 @@
+export type TProfile = {
+  id: string;
+  user: string;
+  name: string;
+  email: string;
+  phoneNumber: string;
+  pwdType: string[];
+  pwdProof: string;
+  isMilitaryVeterans: boolean;
+  militaryVeteransProof: string;
+  isLinguisticBarrier: boolean;
+  linguisticBarrierProof: string;
+  U_PERType: string[];
+  U_PERtYPEProof: string;
+  gender: string;
+  genderProof: string;
+  isIncarcerated: boolean;
+  incarceratedProof: string;
+  companyName: string;
+  website: string;
+  leadership: string;
+  revenue: number;
+  companyUSP: string;
+  aboutCompany: string;
+  createdAt: string;
+  updatedAt: string;
+};
