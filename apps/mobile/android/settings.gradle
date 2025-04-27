@@ -1,6 +1,18 @@
-pluginManagement { includeBuild("../node_modules/@react-native/gradle-plugin") }
-plugins { id("com.facebook.react.settings") }
-extensions.configure(com.facebook.react.ReactSettingsExtension){ ex -> ex.autolinkLibrariesFromCommand() }
-rootProject.name = 'mobile'
-include ':app'
-includeBuild('../node_modules/@react-native/gradle-plugin')
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+    plugins {
+        id("com.android.application") version "8.1.2" // Match AGP version
+        id("org.jetbrains.kotlin.android") version "1.9.10" // Match Kotlin version
+        id("com.facebook.react") version "0.72.4" // Match your React Native version
+        id("com.facebook.react.settings") version "0.72.4" // Match your React Native version
+    }
+}
+
+includeBuild("../../../node_modules/@react-native/gradle-plugin")
+
+rootProject.name = "mobile"
+include(":app")

@@ -1,21 +1,26 @@
-buildscript {
-    ext {
-        buildToolsVersion = "35.0.0"
-        minSdkVersion = 24
-        compileSdkVersion = 35
-        targetSdkVersion = 35
-        ndkVersion = "27.1.12297006"
-        kotlinVersion = "2.0.21"
-    }
-    repositories {
-        google()
-        mavenCentral()
-    }
-    dependencies {
-        classpath("com.android.tools.build:gradle")
-        classpath("com.facebook.react:react-native-gradle-plugin")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin")
-    }
+plugins {
+    id("com.android.application") // No need to specify version again here
+    id("org.jetbrains.kotlin.android")
+    id("com.facebook.react")
 }
 
-apply plugin: "com.facebook.react.rootproject"
+android {
+    namespace "com.rise.mobile"
+    compileSdk = 34
+
+    defaultConfig {
+        applicationId "com.rise.mobile"
+        minSdk = 24
+        targetSdk = 34
+        versionCode = 1
+        versionName = "1.0"
+    }
+
+    buildToolsVersion = "34.0.0"
+    ndkVersion = "25.2.9519653"
+}
+
+repositories {
+    google()
+    mavenCentral()
+}
